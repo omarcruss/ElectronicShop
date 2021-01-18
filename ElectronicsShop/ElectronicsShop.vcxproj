@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AbstractStringOutput.h" />
     <ClInclude Include="Catalog.h" />
     <ClInclude Include="CompanyUser.h" />
     <ClInclude Include="AbstractCustomer.h" />
@@ -156,6 +157,7 @@
     <ClInclude Include="UnregisteredUser.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AbstractStringOutput.cpp" />
     <ClCompile Include="Catalog.cpp" />
     <ClCompile Include="CompanyUser.cpp" />
     <ClCompile Include="AbstractCustomer.cpp" />

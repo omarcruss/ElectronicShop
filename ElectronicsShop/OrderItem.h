@@ -1,7 +1,10 @@
 #pragma once
 #include "Product.h"
+#include "AbstractStringOutput.h"
+#include <iostream>
+#include <sstream>
 
-class OrderItem
+class OrderItem : public AbstractStringOutput
 {
 private:
 	Product* _product;
@@ -10,5 +13,7 @@ public:
 	OrderItem(Product* product, int pieces);
 	~OrderItem();
 	int GetPieces();
+	virtual int GetTotalPrice();
+	virtual string ToString();
 };
 

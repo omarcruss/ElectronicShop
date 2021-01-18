@@ -1,8 +1,9 @@
 #pragma once
-#include <iostream>
+#include "AbstractStringOutput.h"
+#include <string>
 using namespace std;
 
-class Product
+class Product : public AbstractStringOutput
 {
 private:
 	string _name;
@@ -17,4 +18,5 @@ public:
 	string GetManufactuer();
 	int GetId();
 	double GetPrice();
+	virtual string ToString() = 0;
 };

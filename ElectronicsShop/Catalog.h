@@ -1,6 +1,10 @@
 #pragma once
 #include "Product.h"
+#include "AbstractStringOutput.h"
 #include <list>
+#include <iostream>
+
+using namespace std;
 
 class Catalog
 {
@@ -11,6 +15,6 @@ public:
 	~Catalog();
 
 	void AddNewProduct(Product* product);
-	Product* GetAllProducts();
+	void ListAllProducts();
 };
 

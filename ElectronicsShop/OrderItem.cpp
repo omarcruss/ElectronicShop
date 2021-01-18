@@ -15,3 +15,15 @@ int OrderItem::GetPieces()
     return this->_pieces;
 }
 
+int OrderItem::GetTotalPrice()
+{
+	int totalPrice = 0;
+	return totalPrice += this->_product->GetPrice() * this->GetPieces();
+}
+
+string OrderItem::ToString()
+{
+	std::ostringstream result;
+	result << "Product: " << this->_product->ToString() << "\n" << "Pieces: " << this->_pieces << "\n" << "Total price: " << "$" << this->GetTotalPrice() << endl;
+	return result.str();
+}

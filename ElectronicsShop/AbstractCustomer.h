@@ -1,8 +1,9 @@
 #pragma once
 #include <iostream>
+#include "AbstractStringOutput.h"
 using namespace std;
 
-class AbstractCustomer
+class AbstractCustomer : public AbstractStringOutput
 {
 private:
 	string _name;
@@ -15,5 +16,5 @@ public:
 	string GetName();
 	string GetAddress();
 	string GetEmail();
+	virtual string ToString() = 0;
 };
-
