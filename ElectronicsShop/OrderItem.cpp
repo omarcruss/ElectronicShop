@@ -17,8 +17,7 @@ int OrderItem::GetPieces()
 
 int OrderItem::GetTotalPrice()
 {
-	int totalPrice = 0;
-	return totalPrice += this->_product->GetPrice() * this->GetPieces();
+	return this->_product->GetPrice() * this->GetPieces();
 }
 
 string OrderItem::ToString()

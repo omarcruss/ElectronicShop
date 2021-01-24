@@ -36,12 +36,10 @@ string Order::ToString()
 int Order::GetFinalPrice()
 {
 	int finalPrice = 0;
-	int tempPrice = 0;
 	cout << "Final price to pay: $";
 	for (list<OrderItem*>::iterator i = this->_orderItems.begin(); i != this->_orderItems.end(); ++i)
 	{
-		tempPrice += (*i)->GetTotalPrice();
+		finalPrice += (*i)->GetTotalPrice();
 	}
-	finalPrice += tempPrice;
 	return finalPrice;
 }
